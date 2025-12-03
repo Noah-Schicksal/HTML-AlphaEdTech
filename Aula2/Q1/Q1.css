@@ -1,0 +1,27 @@
+
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center; /* centro horizontal */
+    align-items: center;    /* centro vertical */
+    background-color: #f2f2f2;
+    font-family: Arial, sans-serif;
+}
+
+/* eontainer principal */
+.container {
+    text-align: center;
+}
+
+/* estilo para o título */
+.container h1 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* estilo do video */
+video {
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}

@@ -1,0 +1,54 @@
+.map-container {
+    text-align: center;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+}
+
+.buttons {
+    margin-bottom: 15px;
+}
+
+.buttons label {
+    background: #444;
+    color: white;
+    padding: 8px 15px;
+    margin: 0 5px;
+    border-radius: 6px;
+    cursor: pointer;
+    display: inline-block;
+}
+
+input[type="radio"] {
+    display: none; 
+}
+
+.maps iframe {
+    display: none;
+    width: 80%;
+    height: 450px;
+    max-width: 700px;
+    margin: auto;
+    border-radius: 20px;   
+    box-shadow: 0 8px 25px rgba(0,0,0,.5);
+    
+}
+
+/* mostra mapa de acordo com o botão */
+#map1:checked ~ .maps iframe:nth-child(1) {
+    display: block;
+}
+
+#map2:checked ~ .maps iframe:nth-child(2) {
+    display: block;
+}
+
+#map3:checked ~ .maps iframe:nth-child(3) {
+    display: block;
+}
+
+/* botao ativo com cor diferente */
+#map1:checked + label,
+#map2:checked + label,
+#map3:checked + label {
+    background: #00aaff;
+}
