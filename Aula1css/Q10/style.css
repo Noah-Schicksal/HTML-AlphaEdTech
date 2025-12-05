@@ -1,0 +1,355 @@
+html,
+body {
+    height: 100%;
+    margin: 0;
+    overflow: hidden;
+    background-color: black;
+}
+
+
+#divpr {
+    width: 100%;
+    height: 100vh;
+}
+
+table {
+    width: 100%;
+    height: 100%;
+    border-collapse: collapse;
+}
+
+td {
+    padding: 0;
+    vertical-align: top;
+}
+
+
+/* ======================itens domeio================== */
+
+
+.landscapeimg-wrapper {
+    width: 100%;
+    height: 33.3vh;
+    padding: 0;
+    overflow: visible;
+}
+
+/* Card */
+.landscapeimg {
+    width: 90%;
+    height: 32.5vh;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    border-radius: 1.5rem;
+    overflow: hidden;
+    transition: transform .4s, box-shadow .4s;
+    box-sizing: border-box;
+    border: black 2px solid;
+}
+
+
+.landscapeimg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    
+    border-radius: inherit;
+    transition: transform .60s ease;
+}
+
+/* Efeito quando passa o mouse */
+.landscapeimg:hover {
+    transform: scale(1.50);
+    z-index: 10;
+    box-shadow: 0 0 25px 8px rgba(155, 80, 255, 0.7);
+}
+
+.landscapeimg:hover img {
+    transform: scale(1.25);
+    /* imagem cresce internamente */
+}
+
+/* ===== Overlay exclusivo das imagens do meio ===== */
+.landscapeimg .land-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, .65);
+    border-radius: inherit;
+    padding: 2.2rem;
+    opacity: 0;
+    transition: .4s;
+    color: white;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+    z-index: 5;
+    overflow: hidden;
+}
+
+.landscapeimg:hover .land-overlay {
+    opacity: 1;
+}
+
+/* Texto interno Meio */
+.landscapeimg .nome {
+    font-size: 2.8rem;
+    font-weight: bold;
+    margin: 0;
+    text-align: left;
+}
+
+.landscapeimg .sub {
+    font-size: 1.8rem;
+    margin: 0;
+    color: purple;
+    text-align: right;
+    font-style: italic;
+    padding-right: 5rem;
+}
+
+.landscapeimg p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    text-align: left;
+    padding-right: 5rem;
+}
+
+/* Card do TOPO — empurra levemente para baixo ao expandir */
+.landscapeimg-wrapper:first-child .landscapeimg:hover {
+    transform: translateY(5rem) scale(1.50);
+}
+
+/* Card do FUNDO — puxa levemente para cima ao expandir */
+.landscapeimg-wrapper:last-child .landscapeimg:hover {
+    transform: translateY(-5rem) scale(1.50);
+}
+
+
+
+/* ======================imagemda direita=================== */
+
+
+.imgdir-wrapper {
+    width: 100%;
+    height: 100vh;
+    padding: 0.3rem;
+    box-sizing: border-box;
+    transition: box-shadow .4s ease, transform .4s ease; /* adicionei para suavizar */
+}
+
+/* Card container */
+.imgdir {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    border-radius: 1.5rem;
+    overflow: hidden;
+    border: black 2px solid;
+}
+
+/* Imagem base */
+.imgdir img:first-child {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: inherit;
+    object-position: left;
+    transition: transform .5s ease, filter .5s ease; /* agora anima suavemente */
+}
+
+/* Logo */
+#sl_logo {
+    position: absolute;
+    width: 70%;
+    bottom: 50px;
+    right: 10px;
+    z-index: 5;
+}
+
+/* Overlay direita */
+.imgdir .overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, .65);
+    opacity: 0;
+    transition: opacity .4s ease;
+    padding: 2.2rem;
+    color: white;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 1rem;
+    z-index: 6;
+}
+
+/* hover ativa overlay */
+.imgdir:hover .overlay {
+    opacity: 1; 
+    z-index: 9;
+}
+
+/* imagem aumenta no hover */
+.imgdir:hover img {
+    transform: scale(1.25);
+}
+
+
+.imgdir-wrapper:hover{
+    box-shadow: 0 0 25px 10px rgba(155, 80, 255, 0.7);
+    transform: translateX(-10rem); 
+    transform: scalex(1.15) ;
+}
+
+/* TITULOS */
+.nome {
+    font-size: 2.8rem;
+    font-weight: bold;
+    margin: 0;
+    text-align: left;
+}
+
+.sub {
+    font-size: 1.8rem;
+    margin: 0;
+    color: purple;
+    text-align: right;
+    font-style: italic;
+    padding-right: 1rem;
+}
+
+.infos p {
+    font-size: 1.1rem;
+    margin: 0rem;
+}
+
+.descricao {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    text-align: left;
+    padding-right: 1rem;
+}
+
+/* ======================== habilidades coluna1 ======================== */
+
+#skills-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 0.5rem;
+}
+
+#skills-list>div {
+    width:100%;
+    height: 90%;
+    position: relative;
+    border-radius: 1.5rem;
+    overflow: hidden;
+    border-radius: 2px solid black;
+}
+
+#skills-list img {
+    width: 100%;
+    height: 10%;
+    object-fit: cover;
+}
+
+/* ===== Overlay coluna 1===== */
+
+/* LISTA LATERAL */
+#skills-list {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    width: 100%;
+    padding: 10px;
+}
+
+/* CARD */
+#skills-list > .skill-card{
+    position: relative;
+    width: 100%;
+    height: 283px;
+    border-radius: 15px;
+    overflow: hidden;
+    cursor: pointer;
+    z-index: 1;
+    transition: transform .35s ease, z-index .35s;
+}
+
+/* Imagem */
+#skills-list > .skill-card img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(75%);
+    transition: transform .4s ease, filter .4s ease;
+}
+
+/* texto oculto até o hove */
+#skills-list > .skill-card .land-overlay{
+    position: absolute;
+    inset: 0;
+    padding: 22px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    background: linear-gradient(to top, rgba(0,0,0,.85), transparent 40%);
+    color: white;
+    opacity: 0;                 
+    pointer-events: none;
+    transition: opacity .4s ease;
+}
+
+#skills-list > .skill-card h1{
+    color: darkorchid;
+}
+
+#skills-list > .skill-card:hover .land-overlay{
+    opacity: 1;
+}
+
+/* Títulos e textos */
+#skills-list .land-overlay h1{
+    font-size: 1.9rem;
+    margin: 0;
+}
+#skills-list .land-overlay h2{
+    font-size: 1.2rem;
+    margin: 5px 0 10px;
+    opacity: .85;
+}
+#skills-list .land-overlay p{
+    font-size: .95rem;
+    line-height: 1.5;
+}
+/*  hover */
+
+#skills-list > .skill-card:hover{
+    transform: scale(1.25);  
+    z-index: 9;
+    box-shadow: 0 0 25px 8px rgba(155, 80, 255, 0.7);
+}
+
+#skills-list > .skill-card:hover img{
+    transform: scale(1.25);
+    filter: brightness(40%);
+}
+
+/*  ajustes */
+
+
+#skills-list > .skill-card:first-child:hover{
+    transform: scale(1.25) translateY(2rem) translateX(2rem);
+}
+
+#skills-list > .skill-card:nth-child(2):hover{
+    transform: scale(1.25) translateX(2rem);
+}
+
+#skills-list > .skill-card:last-child:hover{
+    transform: scale(1.25) translateY(-2rem) translateX(2rem);   
+}
