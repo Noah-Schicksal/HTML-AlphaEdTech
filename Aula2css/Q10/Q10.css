@@ -1,0 +1,33 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    border: 2px solid black;
+    border-radius: 15px;
+    padding: 10px;
+}
+
+.card__title.card__title{
+    color: rgb(255, 0, 0);
+}
+
+.card__button:hover{
+    background: rgb(186, 0, 0);
+}
+

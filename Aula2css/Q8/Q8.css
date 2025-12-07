@@ -1,0 +1,42 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container .animated{
+    background: blue;
+    width: auto;
+    max-width: 50px; 
+    color: white;
+    padding: 15px;
+    overflow: hidden;
+    border-radius: 2rem;
+    cursor: pointer;
+    white-space: nowrap;          
+    transition: 1s ease;
+}
+
+#text{
+    opacity: 0;                  
+    transition: opacity .6s ease;
+}
+
+/* Ao passar o mouse */
+.animated:hover{
+    max-width: 1000px;            
+    padding: 15px 25px;
+}
+
+.animated:hover #text{
+    opacity: 1;                  
+}

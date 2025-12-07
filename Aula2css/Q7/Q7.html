@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="Q7.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questão 7</title>
+</head>
+    <body>
+        <div class="container">
+            <h1>Uso de ::after e ::before</h1>
+            <h3>before:</h3>
+            <p>aqui uso o before para exibir uma estrela antes do texto
+                não precisando declarar essa estrela no HTML!
+            </p>
+            <div id="bef">::before</div>
+            <h3>after:</h3>
+            <p>
+                aqui uso o ::before para adicionar a mesma estrela ao
+                conteúdo, porém depois do texto!
+            </p>
+            <div id="aft">::after</div>
+
+            <h3>after + hover:</h3>
+            <p>
+                aqui combinei hover com after e before para exiir estrelas
+                no inicio e no final, somente quando o mouse passa sobre o elemento
+            </p>
+            <div id="aft_h">★</div>
+        </div>    
+        <div class="container">
+            <h1>uso do pseudo-elementomento pouco conhecido</h1>
+            <h2>::selection</h2>
+            <p class="selection">selecione esse texto com seu mouse!</p>
+            <p class="selection">
+                aqui usei ::selection para alterar o contorno do texto selecionado,
+                o deixando na cor preta, e também deixei o texto branco
+            </p>
+        </div>
+    </body>
+</html>

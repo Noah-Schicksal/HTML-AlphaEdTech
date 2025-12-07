@@ -1,0 +1,63 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+div{
+    background-color: black;
+}
+
+.container{
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    gap: 5px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+button{
+    height: 50px;
+    max-height: 100px;
+    width: 80px;
+    max-width: 80px;
+    border-radius: 15px;
+    border: 1px solid black;
+    background-color: rgb(188, 0, 213);
+    color: white;
+    transition: .4s ease;
+}
+
+.PHM{
+    display: none;
+}
+
+button:hover .HM{
+    display: none;
+}
+
+button:hover .PHM{
+    display: inline;
+}
+
+.container button:first-child:hover{
+    background: rgb(255, 251, 0);
+    transform: scale(1.05) translateY(-10px) rotate(-360deg) translateX(-5px);
+    box-shadow: 0 4px 150px  rgb(255, 222, 161);
+    color: black;
+}
+.container button:nth-child(2):hover{
+    background: rgb(0, 255, 72);
+    transform: scale(1.05) translateY(-10px) rotate(-360deg);
+    box-shadow: 0 4px 150px  rgb(171, 255, 195);
+    color: black;
+}
+.container button:last-child:hover{
+    background: rgb(0, 207, 179);
+    transform: scale(1.05) translateY(-10px) rotate(-360deg) translateX(5px);
+    box-shadow: 0 4px 150px  rgb(158, 248, 251);
+    color: black;
+}
+

@@ -351,5 +351,5 @@ td {
 }
 
 #skills-list > .skill-card:last-child:hover{
-    transform: scale(1.25) translateY(-2rem) translateX(2rem);   
+    transform: scale(1.25) translateY(-2rem) translateX(2rem) ;   
 }
