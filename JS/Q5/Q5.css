@@ -1,0 +1,32 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    justify-content: center;
+    align-items: center;
+}
+
+.pneu{
+    height: 150px;
+    width: 150px;
+    background: url("assets/pneuMurcho.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    margin: 100px;
+}
+
+.bomba{
+    height: 150px;
+    width: 150px;
+    background: url("assets/bomba.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
