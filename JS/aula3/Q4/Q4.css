@@ -1,0 +1,25 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+   display: flex;
+   height: 100vh;
+   width: 100vw;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   gap: 10px;
+}
+
+#nomes{
+    height: 100px;
+    width: 200px;
+}
+
+#listar{
+    height: 40px;
+    width: 60px;
+}

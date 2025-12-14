@@ -1,0 +1,48 @@
+<html>
+  <head></head>
+  <body>
+    <!-- input e botão dentro do form
+      Assim o enter tenta enviar o formulário
+    -->
+    <form id="task-form">
+      Tarefa: <input id="input-task" />
+      <br />
+      <button id="add-button">Adicionar</button>
+    </form>
+
+    <ul id="task-list"></ul>
+
+    <script>
+      // <ul> onde as tarefas serão adicionadas
+      const taskListUl = document.getElementById("task-list");
+
+      // input onde o usuário digita a tarefa
+      const inputTask = document.getElementById("input-task");
+
+      // formulário inteiro
+      const form = document.getElementById("task-form");
+
+      /*
+        Quando o usuário aperta eter ou clica no botão,
+        o formulário dispara o evento submit
+      */
+      form.addEventListener("submit", function (event) {
+        
+        // Impede o comportamento padrão do form de recarregar a pag
+        event.preventDefault();
+
+        //pego texto digitado no input
+        const task = inputTask.value.trim();
+
+        //limpa input para ficar pronto para a próxima tarefa
+        inputTask.value = "";
+
+        // se apertar enter sem digitar nada, não adiciona
+        if (task === "") return;
+
+        // Adiciona a tarefa como um <li> dentro do <ul>
+        taskListUl.innerHTML += `<li>${task}</li>`;
+      });
+    </script>
+  </body>
+</html>

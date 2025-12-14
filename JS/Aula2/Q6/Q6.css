@@ -1,0 +1,30 @@
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+
+#outer {
+    width: 600px;
+    height: 300px;
+    border: 3px solid black;
+    position: relative;
+}
+
+#inner {
+    width: 60px;
+    height: 60px;
+    background-color: rgb(255, 170, 170);
+    position: absolute;
+    left: 270px; /* centralizado */
+    top: 120px;
+    transition: background-color 0.2s ease;
+}
+
+
+#inner.active {
+    background-color: rgb(255, 120, 120);
+}

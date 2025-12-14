@@ -1,0 +1,47 @@
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 18px;
+    background-color: #f8bcbc;
+    border: 2px solid #d19090;
+    cursor: pointer;
+}
+
+hr {
+    margin: 20px 0;
+}
+
+.linha {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    gap: 10px;
+}
+
+.btn {
+    width: 35px;
+    height: 35px;
+    font-size: 20px;
+    border-radius: 6px;
+    border: 2px solid #888;
+    cursor: pointer;
+}
+
+.btn.menos {
+    background: #ff9a9a;
+}
+
+.btn.mais {
+    background: #9ad0ff;
+}
+
+.valor {
+    width: 40px;
+    text-align: center;
+    font-size: 22px;
+    font-weight: bold;
+}

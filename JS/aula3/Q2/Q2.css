@@ -1,0 +1,149 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    padding: 5px 10px;
+}
+
+#esq {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 99vh;
+    min-width: 200px;
+    width: fit-content;
+    border: 2px solid black;
+    padding-top: 10px;
+}
+
+#lista {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-y: auto;
+}
+
+#adicionar {
+    width: 180px;
+    height: 90px;
+    margin: 20px 0;
+    font-size: 80px;
+    border-radius: 10px;
+    background-color: pink;
+    cursor: pointer;
+}
+
+#dir {
+    display: flex;
+    height: 99vh;
+    width: 69vw;
+    border: 2px solid black;
+}
+
+#editarReceita {
+    grid-template-columns: 1fr auto;
+    grid-template-areas:
+        "titulo deletar"
+        "conteudo conteudo";
+    column-gap: 20px;
+    padding: 20px;
+    width: 100%;
+}
+
+#editarReceita > h1 {
+    grid-area: titulo;
+    margin: 0;
+    align-self: center;
+}
+
+#deletar {
+    grid-area: deletar;
+    height: 40px;
+    padding: 0 15px;
+    border-radius: 8px;
+    background-color: #ffb3b3;
+    cursor: pointer;
+    align-self: center;
+}
+
+#editarReceita > h3,
+#editarReceita > input,
+#editarReceita > textarea {
+    grid-column: 1 / -1;
+}
+
+h3 {
+    margin-top: 20px;
+}
+
+#titulo {
+    height: 40px;
+    width: 220px;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+#ingredientes {
+    height: 120px;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+#preparo {
+    height: 160px;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+#comecar{
+    padding: 300px 50px 0px 50px;
+}
+
+.newCard {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-width: 180px;
+    width: fit-content;
+    max-width: 250px;
+    height: fit-content;
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 5px;
+    margin: 10px;
+    background-color: lightgreen;
+    cursor: pointer;
+}
+
+.newCard.active {
+    background: lightblue; 
+    color: white;
+    border: 3px solid blue;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.newCard.filled {
+    background: lightblue; 
+}
+
+.hidden {
+    display: none;
+}
+
+.show {
+    display: flex;
+}
+
+.grid{
+    display: grid;
+}

@@ -1,0 +1,35 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+   display: flex;
+   height: 100vh;
+   width: 100vw;
+   flex-direction: column;
+}
+
+#form{
+    display: flex;
+    width: fit-content;
+    flex-direction: column;
+    gap: 5px;
+    justify-content: start;
+    margin: 10px 0px 10px 10px;
+}
+
+#exhib{
+    display: flex;
+    width: fit-content;
+    flex-direction: column;
+    justify-content: start;
+    gap: 10px;
+    margin: 20px 0px 10px 10px;
+    justify-content: start;
+}
+
+#lista{
+    margin: 0px 0px 0px 20px;
+}

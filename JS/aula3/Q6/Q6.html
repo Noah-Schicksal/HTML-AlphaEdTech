@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Produtos</title>
+    <link rel="stylesheet" href="Q6.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Cadastro de Produtos</h1>
+
+        <form id="formProduto">
+            <label>Nome do Produto:
+                <input type="text" id="nome">
+            </label>
+            <label>Descrição:
+                <input type="text" id="descricao">
+            </label>
+            <label>Valor:
+                <input type="number" id="valor" min="0" step="0.01">
+            </label>
+            <button type="submit" id="incluir">Incluir produto</button>
+        </form>
+
+        <div id="mensagem"></div>
+
+        <table id="tabelaProdutos">
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>Valor</th>
+                    <th>Editar</th>
+                    <th>Apagar</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </div>
+
+    <!-- modal de visualização -->
+    <div class="modal" id="modalView">
+        <div class="modal-content">
+            <span class="close" id="closeView">&times;</span>
+            <h2>Detalhes do Produto</h2>
+            <p id="detalhesProduto"></p>
+        </div>
+    </div>
+
+    <!-- modal de edição -->
+    <div class="modal" id="modalEdit">
+        <div class="modal-content">
+            <span class="close" id="closeEdit">&times;</span>
+            <h2>Editar Produto</h2>
+            <form id="formEdit">
+                <label>Nome:
+                    <input type="text" id="editNome">
+                </label>
+                <label>Descrição:
+                    <input type="text" id="editDescricao">
+                </label>
+                <label>Valor:
+                    <input type="number" id="editValor" min="0" step="0.01">
+                </label>
+                <button type="submit">Salvar</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="Q6.js"></script>
+</body>
+</html>
